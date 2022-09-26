@@ -16,7 +16,7 @@ export const useSearch = (data = [], keys = []) => {
 
   useEffect(() => {
     setList(slist)
-  }, [term])
+  }, [term]) // eslint-disable-line
 
   const good = list.filter(({ score }) => score < 0.4) || []
   const matchIdList = good.map(({ refIndex }) => refIndex)
